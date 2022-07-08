@@ -1,0 +1,33 @@
+.try__cd {
+  height: 53rem;
+  perspective: 90rem;
+  -moz-perspective: 90rem;
+  position: relative;
+}
+.try__cd-sides {
+  height: 53rem;
+  transition: all 1.2s;
+  color: aqua;
+  font-size: 2rem;
+  position: absolute;
+  border-radius: 0.3rem;
+  /* overflow: hidden; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 1.5rem 4rem black;
+  backface-visibility: hidden;
+}
+.try__cd-sides-front {
+  background-color: aqua;
+}
+.try__cd-sides-back {
+  transform: rotateY(180deg);
+  background-color: bisque;
+}
+.try__cd:hover .try__cd-sides-front {
+  transform: rotateY(-180deg);
+}
+.try__cd:hover .try__cd-sides-back {
+  transform: rotateY(0deg);
+} /*# sourceMappingURL=try.css.map */

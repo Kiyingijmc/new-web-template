@@ -1,0 +1,102 @@
+// .try__cd {
+//   height: 53rem;
+//   perspective: 90rem;
+//   -moz-perspective: 90rem;
+//   position: relative;
+
+//   &-sides {
+//     height: 53rem;
+//     transition: all 1.2s;
+//     color: aqua;
+//     font-size: 2rem;
+//     position: absolute;
+//     border-radius: 0.3rem;
+//     overflow: hidden;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     box-shadow: 0 1.5rem 4rem black;
+//     backface-visibility: hidden;
+//     &-front {
+//       background-color: aqua;
+//     }
+//     &-back {
+//       transform: rotateY(180deg);
+
+//       background-color: bisque;
+//     }
+//   }
+//   &:hover &-sides-front {
+//     transform: rotateY(-180deg);
+//   }
+
+//   &:hover &-sides-back {
+//     transform: rotateY(0deg);
+//   }
+// }
+
+.try__cd {
+  height: 55rem;
+  width: 40rem;
+  perspective: 90rem;
+  position: relative;
+  margin: auto;
+
+  &-sides {
+    transition: all 1.5s;
+    height: 55rem;
+    width: 40rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    color: $color-slitgray;
+    text-align: center;
+    //backface-visibility: hidden;
+
+    &-front {
+      font-size: 1.8rem;
+      background-color: $color-white;
+      font-size: 1.8rem;
+      .front__img {
+        height: 25rem;
+        background-image: url(../img/nat-10.jpg);
+        background-size: cover;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 2% 70%);
+      }
+      .front__heading {
+        position: absolute;
+        top: 21rem;
+        left: 45%;
+        font-size: 2.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $secondary-color-dark;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+        border-bottom: 0.3rem solid $color-black;
+        border-left: 0.3rem solid $color-black;
+      }
+
+      .front__details {
+        text-transform: capitalize;
+        color: $color-gray;
+        height: 23rem;
+        margin-top: 2.5rem;
+        padding: 0.6rem;
+      }
+    }
+
+    &-back {
+      transform: rotateY(180deg);
+      background-color: aqua;
+    }
+  }
+  &:hover &-sides-front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &-sides-back {
+    transform: rotateY(0deg);
+  }
+}
