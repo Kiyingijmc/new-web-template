@@ -10,6 +10,12 @@
   visibility: hidden;
   transition: all 0.3s;
 
+  @support (-webkit-backdrop-filter: blur(5rem)) or (backdrop-filter:blur(5rem)) {
+    -webkit-backdrop-filter: blur(5rem);
+    backdrop-filter: blur(5rem);
+    background-color: rgba($color-black, 0.28);
+  }
+
   &__content {
     position: absolute;
     top: 0;

@@ -295,6 +295,13 @@ body {
   visibility: hidden;
   transition: all 0.3s;
 }
+@support (-webkit-backdrop-filter: blur(5rem)) or (backdrop-filter:blur(5rem)) {
+  .popup {
+    -webkit-backdrop-filter: blur(5rem);
+    backdrop-filter: blur(5rem);
+    background-color: rgba(0, 0, 0, 0.28);
+  }
+}
 .popup__content {
   position: absolute;
   top: 0;
