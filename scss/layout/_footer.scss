@@ -3,10 +3,17 @@
   padding: 10rem 0;
   color: $color-slitgray;
   font-size: 1.4rem;
+  @include respond(tab-port) {
+    padding: 6.5rem 0;
+    text-align: center;
+  }
 
   &__logo-box {
     text-align: center;
     margin-bottom: 8rem;
+    @include respond(tab-port) {
+      margin-bottom: 5rem;
+    }
   }
 
   &__logo {
@@ -18,17 +25,31 @@
     border-top: 0.1rem solid $color-darkgray;
     display: inline-block;
     padding-top: 2rem;
+
+    @include respond(tab-port) {
+      display: block;
+      padding-top: 1.5rem;
+    }
   }
 
   &__list {
     list-style: none;
+    @include respond(tab-port) {
+      text-align: center;
+    }
   }
 
   &__item {
     display: inline-block;
+    @include respond(tab-port) {
+      display: block;
+    }
 
     &:not(:last-child) {
       margin-right: 1.2rem;
+      @include respond(tab-port) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -56,5 +77,9 @@
     padding-top: 2rem;
     width: 85%;
     float: right;
+    @include respond(tab-port) {
+      float: none;
+      display: inline-block;
+    }
   }
 }

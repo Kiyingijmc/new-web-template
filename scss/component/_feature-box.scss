@@ -17,6 +17,15 @@
     );
     -webkit-background-clip: text;
     color: transparent;
+    @include respond(tab-port) {
+      margin-bottom: 0.2rem;
+      display: block;
+    }
+    @include respond(phone) {
+      margin-bottom: 0rem;
+      display: inline-block;
+      line-height: 2rem;
+    }
   }
 
   &:hover {
@@ -24,5 +33,16 @@
   }
 
   &-text {
+    text-align: center;
+    font-size: 1.8rem;
+    color: $color-darkgra;
+    @include respond(tab-port) {
+      font-size: 1.6rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.6rem;
+      line-height: 2rem;
+    }
   }
 }
