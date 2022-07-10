@@ -8,6 +8,13 @@
   border-radius: 0.3rem;
   padding: 6rem;
   padding-left: 9rem;
+  @include respond(phone) {
+    transform: skewX(0);
+    width: 95%;
+    padding: 4rem;
+    padding-left: 0;
+    text-align: center;
+  }
 
   &__shape {
     width: 15rem;
@@ -22,6 +29,11 @@
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
+    @include respond(phone) {
+      float: none;
+      text-align: center;
+      transform: translateX(-3rem) skewX(0);
+    }
   }
 
   &_image {
@@ -30,10 +42,22 @@
     backface-visibility: hidden;
     transform: translateX(-4rem) scale(1.4);
     transition: all 0.6s;
+    @include respond(phone) {
+      transform: translateX(0) scale(1.2);
+    }
   }
 
   &__text {
     transform: skewX(12deg);
+    @include respond(phone) {
+      transform: skewX(0);
+      font-size: 2.2rem;
+      color: $color-darkgra;
+      font-weight: 500;
+      hyphens: auto;
+      height: auto;
+      padding: 2rem;
+    }
   }
 
   &__hold {
@@ -55,16 +79,37 @@
     font-weight: 700;
     color: $secondary-color;
     transition: all 0.6s;
+    @include respond(phone) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      margin: 0 auto;
+      height: 2.5rem;
+      width: 60%;
+      opacity: 1;
+    }
   }
 
   &:hover &__hold {
     top: 0;
     opacity: 1;
     transform: translate(-50% -50%);
+    @include respond(phone) {
+      top: 0;
+      opacity: 1;
+      transform: translate(0 0);
+    }
   }
 
   &:hover &_image {
     transform: translateX(-4rem) scale(1);
     filter: blur(0.3rem) brightness(80%);
+    @include respond(phone) {
+      transform: translateX(0) scale(1.2);
+      filter: blur(0) brightness(100%);
+    }
   }
 }

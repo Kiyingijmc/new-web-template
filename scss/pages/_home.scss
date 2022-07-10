@@ -69,11 +69,25 @@
   height: 50rem;
   border-radius: 1rem;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.9);
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        to right top,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.8) 70%,
+        rgba($color-white, 0) 70%
+      ),
+      url(../img/nat-10.jpg);
+    background-size: cover;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.9);
+  }
   &__form {
     width: 50%;
     padding: 6rem;
     @include respond(tab-port) {
-      padding: 6rem 0;
+      width: 100%;
+      padding: 2.5rem;
     }
   }
 }

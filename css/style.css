@@ -799,6 +799,15 @@ body {
   padding: 6rem;
   padding-left: 9rem;
 }
+@media (max-width: 37.5em) {
+  .story {
+    transform: skewX(0);
+    width: 95%;
+    padding: 4rem;
+    padding-left: 0;
+    text-align: center;
+  }
+}
 .story__shape {
   width: 15rem;
   height: 15rem;
@@ -811,6 +820,13 @@ body {
   clip-path: circle(50% at 50% 50%);
   transform: translateX(-3rem) skewX(12deg);
 }
+@media (max-width: 37.5em) {
+  .story__shape {
+    float: none;
+    text-align: center;
+    transform: translateX(-3rem) skewX(0);
+  }
+}
 .story_image {
   z-index: -5;
   height: 100%;
@@ -818,8 +834,24 @@ body {
   transform: translateX(-4rem) scale(1.4);
   transition: all 0.6s;
 }
+@media (max-width: 37.5em) {
+  .story_image {
+    transform: translateX(0) scale(1.2);
+  }
+}
 .story__text {
   transform: skewX(12deg);
+}
+@media (max-width: 37.5em) {
+  .story__text {
+    transform: skewX(0);
+    font-size: 2.2rem;
+    color: #333;
+    font-weight: 500;
+    hyphens: auto;
+    height: auto;
+    padding: 2rem;
+  }
 }
 .story__hold {
   position: absolute;
@@ -839,14 +871,40 @@ body {
   color: rgb(9, 170, 0);
   transition: all 0.6s;
 }
+@media (max-width: 37.5em) {
+  .story__hold {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    height: 2.5rem;
+    width: 60%;
+    opacity: 1;
+  }
+}
 .story:hover .story__hold {
   top: 0;
   opacity: 1;
   transform: translate(-50% -50%);
 }
+@media (max-width: 37.5em) {
+  .story:hover .story__hold {
+    top: 0;
+    opacity: 1;
+    transform: translate(0 0);
+  }
+}
 .story:hover .story_image {
   transform: translateX(-4rem) scale(1);
   filter: blur(0.3rem) brightness(80%);
+}
+@media (max-width: 37.5em) {
+  .story:hover .story_image {
+    transform: translateX(0) scale(1.2);
+    filter: blur(0) brightness(100%);
+  }
 }
 
 .bg-video {
@@ -1268,12 +1326,22 @@ body {
   border-radius: 1rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.9);
 }
+@media (max-width: 56.25em) {
+  .book {
+    background-image: linear-gradient(to right top, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 70%, rgba(255, 255, 255, 0) 70%), url(../img/nat-10.jpg);
+    background-size: cover;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.9);
+  }
+}
 .book__form {
   width: 50%;
   padding: 6rem;
 }
 @media (max-width: 56.25em) {
   .book__form {
-    padding: 6rem 0;
+    width: 100%;
+    padding: 2.5rem;
   }
 }/*# sourceMappingURL=style.css.map */
