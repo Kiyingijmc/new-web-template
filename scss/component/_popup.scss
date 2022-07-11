@@ -14,6 +14,9 @@
     -webkit-backdrop-filter: blur(5rem);
     backdrop-filter: blur(5rem);
     background-color: rgba($color-black, 0.28);
+
+    @include respond(phone) {
+    }
   }
 
   &__content {
@@ -33,33 +36,79 @@
     transition: all 0.25s;
     opacity: 0;
     transform: scale(0.4) skewX(10deg);
+    @include respond(phone) {
+      display: table;
+      width: 100%;
+    }
+
+    @include respond(tab-port) {
+      display: table;
+      width: 100%;
+      height: 100vh;
+      padding: 2rem;
+    }
   }
 
   &__left {
+    position: relative;
     width: 33.33333%;
     display: table-cell;
+
+    @include respond(phone) {
+      width: 100%;
+      height: 18.3rem;
+      display: table-row;
+      padding: 2rem;
+    }
   }
 
   &__right {
+    position: relative;
     width: 66.666667%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+    @include respond(phone) {
+      width: 100%;
+      text-align: center;
+      display: table-row;
+      padding: 3rem;
+    }
   }
 
   &__img {
     display: block;
     width: 100%;
+    @include respond(phone) {
+      display: t;
+      width: 45%;
+      padding: 2rem;
+      height: 100%;
+      //overflow: hidden;
+      display: inline-block;
+      &:not(:last-child) {
+        margin-right: 0rem;
+        margin-left: 2.2rem;
+      }
+    }
   }
 
   &__text {
-    font-size: 1.6rem;
+    font-size: 2.2rem;
     margin-bottom: 4rem;
 
     column-count: 2;
     column-gap: 4rem;
     column-rule: 0.1rem solid $color-darkgray;
     hyphens: auto;
+    @include respond(tab-port) {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+
+      column-count: 1;
+      column-gap: 0;
+      column-rule: none;
+    }
   }
 
   &:target {
@@ -80,17 +129,32 @@
       color: $color-darkgra;
       position: absolute;
       top: 0;
-      right: 1rem;
+      right: 1.5rem;
       transition: all 0.2s;
+
+      @include respond(phone) {
+        right: 1rem;
+        font-size: 5rem;
+        color: red;
+        transition: none;
+      }
     }
     &:hover {
       color: $primary-color;
       transform: rotateY(180deg) scale(2) translateY(0.2rem);
+      @include respond(phone) {
+        color: red;
+        transform: none;
+      }
     }
 
     &:active {
       color: red;
       transform: scale(3) translateY(0.5rem);
+      @include respond(phone) {
+        color: red;
+        transform: none;
+      }
     }
   }
 }

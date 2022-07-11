@@ -54,37 +54,37 @@ BREAKPOINT ARGUMENTS
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       @content;
     }
   }
   // 1em == 16px
   @if $breakpoint == tab-port {
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       @content;
     }
   }
 
   @if $breakpoint == tab-land {
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       @content;
     }
   }
 
   @if $breakpoint == desktop {
-    @media (max-width: 87.5em) {
+    @media only screen and (max-width: 87.5em) {
       @content;
     }
   }
 
   @if $breakpoint == big-desktop {
-    @media (min-width: 112.5em) {
+    @media only screen and (min-width: 112.5em) {
       @content;
     }
   }
 
   @if $breakpoint == phone-small {
-    @media (max-width: 22.5em) {
+    @media only screen and (max-width: 22.5em) {
       @content;
     }
   }
