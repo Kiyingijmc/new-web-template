@@ -15,8 +15,35 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
     <title>Natour s | Exciting tours for adventurous people</title>
+    <style type="text/css" media="all">
+      .hed-nav{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        list-style: none;
+        height: 2rem;
+        z-index: 100000;
+        margin: .4rem,1rem;
+      }
+      .hed-nav_but{
+        flex: 0 0 20%;
+        text-align: center;
+        color: #690d12;
+        font-size: 1.8rem;
+        background-color: ##00aeff;
+        
+      }
+    </style>
   </head>
   <body>
+    <div class="hed">
+      <ul class="hed-nav">
+        <li class="hed-nav_but">home</li>
+        <li class="hed-nav_but">about</li>
+        <li class="hed-nav_but">contact</li>
+        <li class="hed-nav_but">projects</li>
+      </ul>
+    </div>
     <div class="navigation">
       <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
 
